@@ -1,6 +1,6 @@
 {
-    "name": "Randall's Portfolio",
-    "short_name": "Portfolio",
+    "name": "Class Calculator",
+    "short_name": "Calc",
     "start_url": "/",
     "display": "standalone",
     "icons": [
