@@ -15,12 +15,8 @@ function Navbar() {
     );
   });
 
-  // Add a state variable to track the active section
-  const [activeSection, setActiveSection] = useState('Home');
-
   const handleThemeSwitch = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
-    console.log('New Theme:', newTheme);
     localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
   };
@@ -57,7 +53,7 @@ function Navbar() {
 
   return (
     <div className='empty-class'>
-      <div className='w-full h-[80px] flex justify-evenly items-center px-4 scale-100 bg-blue-300 text-grey-50 font-bold dark:bg-ice-dark rounded-full'>
+      <div className='w-full h-[80px] flex justify-evenly items-center px-4 scale-100 bg-magenta-dark text-grey-50 font-bold dark:bg-teal-600 rounded-full'>
         {/* Dark Mode Switch */}
         <h1 className='text-xl'>Class Scheduler</h1>
         <div className='flex px-4 text-grey-50 hover:scale-150 duration-150 hover:text-amber-300 z-1'>
