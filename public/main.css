@@ -609,16 +609,12 @@ video {
   z-index: 50;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-1 {
   margin: 0.25rem;
 }
 
-.m-4 {
-  margin: 1rem;
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-2 {
@@ -632,6 +628,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -664,6 +664,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .flex-grow {
@@ -705,11 +717,6 @@ video {
   border-radius: 0.5rem;
 }
 
-.bg-blue-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(109 102 254 / var(--tw-bg-opacity));
-}
-
 .bg-magenta-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(86 18 73 / var(--tw-bg-opacity));
@@ -718,11 +725,6 @@ video {
 .bg-steel-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(144 158 161 / var(--tw-bg-opacity));
-}
-
-.bg-emerald-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -747,6 +749,10 @@ video {
   padding: 1rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -762,8 +768,22 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .align-middle {
@@ -814,16 +834,6 @@ video {
 
 .text-transparent {
   color: transparent;
-}
-
-.text-ice-light {
-  --tw-text-opacity: 1;
-  color: rgb(218 227 242 / var(--tw-text-opacity));
-}
-
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 .duration-150 {
@@ -907,11 +917,6 @@ code {
   color: rgb(252 211 77 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:bg-ice-dark) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(33 56 97 / var(--tw-bg-opacity));
-}
-
 :is(.dark .dark\:bg-steel-850) {
   --tw-bg-opacity: 1;
   background-color: rgb(35 40 41 / var(--tw-bg-opacity));
@@ -920,11 +925,6 @@ code {
 :is(.dark .dark\:bg-teal-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:bg-emerald-600) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:from-gray-950) {

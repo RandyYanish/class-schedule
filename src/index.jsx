@@ -1,20 +1,20 @@
 // packages
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createHashRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 
 // pages
 import HomePage from './pages/homePage';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
-    path: '/*',
+    path: '*',
     element: <App />,
     children: [
       {
-        path: '/*',
+        path: '*',
         element: <HomePage />,
       },
     ],

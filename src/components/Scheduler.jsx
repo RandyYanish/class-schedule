@@ -82,6 +82,16 @@ const ClassScheduler = () => {
     handleChange({ target: { name: 'startTime', value: updatedStartTime } });
   };
 
+  let handleReset = () => {
+    localStorage.clear();
+    setStartTime('');
+    setEndTime('');
+    setNumberOfScenes('');
+    setNumberOfMonologues('');
+    setSchedule([]);
+    setSceneTime('');
+  };
+
   return (
     <div className='grid mx-2'>
       <div className='flex justify-center align-middle items-center'>
@@ -123,13 +133,27 @@ const ClassScheduler = () => {
         <label className='dark:text-ice-light italic'>Proposed Schedule:</label>
       </div>
       <div className='flex justify-center align-middle items-center'>
-        <ul>
+        <table>
+          <thead>
+            <tr>
+              <th className='dark:text-ice-light w-auto text-right px-2'>Scene</th>
+              <th className='dark:text-ice-light w-auto px-2'>Start</th>
+              <th className='dark:text-ice-light w-auto px-2'>End</th>
+            </tr>
+          </thead>
           {schedule.map((item, index) => (
-            <li key={index} className='dark:text-ice-light text-center m-1'>
-              {`${item.name}: ${formatTimeMinutes(item.startTime)} - ${formatTimeMinutes(item.endTime)}`}
-            </li>
+            <tbody key={index} className='dark:text-ice-light text-center m-1'>
+              <tr>
+                <td className='text-right w-auto px-2'>{item.name}:</td>
+                <td className='w-auto px-2'>{formatTimeMinutes(item.startTime)}</td>
+                <td className='w-auto px-2'>{formatTimeMinutes(item.endTime)}</td>
+              </tr>
+            </tbody>
           ))}
-        </ul>
+        </table>
+      </div>
+      <div className='flex justify-center align-middle items-center'>
+        <button onClick={handleReset} className='rounded-full hover:bg-magenta bg-magenta-dark dark:bg-teal-600 py-2 px-8 text-steel-light text-xl font-serif dark:hover:bg-teal-500 pointer-events-auto hover:scale-110 duration-500 m-2'>Reset</button>
       </div>
     </div>
   );
